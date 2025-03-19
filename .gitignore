@@ -1,0 +1,4 @@
+ITSM/__pycache__/*
+Incidents/__pycache__/*
+ITSM/migrations/__pycache__/*
+Data/Forecast/*

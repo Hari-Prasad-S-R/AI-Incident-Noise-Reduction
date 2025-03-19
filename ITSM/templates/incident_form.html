@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<h1 class="mb-4">{{ form_title }}</h1>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        {{ form.title|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        {{ form.description|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        {{ form.status|add_class:"form-select" }}
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="{% url 'incident_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
